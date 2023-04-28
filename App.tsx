@@ -1,11 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import HeaderNavigation from './src/components/headerNavigation';
+import PaymentForm from './src/components/paymentForm';
+import NavigationMenu from './src/components/navigationMenu';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
+      <HeaderNavigation />
+      <PaymentForm />
+      <NavigationMenu />
     </View>
   );
 }
@@ -13,8 +18,9 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#FFFFFF',
+    width: "100%",
+    flexDirection: 'column',
+    alignContent: 'center',
   },
 });
